@@ -1,88 +1,166 @@
 # Helping Hands
 
-*An open-source interactive sculpture platform for sharing stories from possible futures through touch, sound, light, and connected public installation.*
+Helping Hands is an open-source interactive sculpture project built around cast hands, touch, light, sound, and a modular 3D-printed/electronic build system.
+
+Hold a hand, and it responds.
+
+Build one hand as a standalone piece, or treat it as part of a wider networked installation where multiple hands can react together across a space.
 
 ![Helping Hands hero image](assets/images/hero.jpg)
 
-Helping Hands is a modular system for creating interactive cast-hand sculptures that invite people to physically hold, listen to, and reflect on shared stories of the future.
-
-At its core, the project combines tactile sculpture, embedded electronics, printed hardware, audio playback, and open documentation. A single hand can operate as a standalone interactive object, but the wider system is designed as a connected platform: multiple hands can be configured as part of larger installations, responding across a shared environment and extending the project from one encounter into a distributed public experience.
-
-This repository is the main home of the project. It brings together the firmware, 3D files, build logic, hardware notes, casting methods, setup workflow, and customisation guidance needed to understand, reproduce, and adapt the system.
+Join in, remix it, build your own version, and make it strange.
 
 ---
 
-## What this project includes
+## What is it?
 
-Helping Hands is not just one object. It is a wider build ecosystem that includes:
+Helping Hands combines:
 
-- interactive hand sculptures
-- modular enclosure and mounting parts
-- a printed PCB-style internal hardware system
-- firmware for interaction, timing, and audio behaviour
-- a guided flashing and configuration workflow
-- casting tools and alignment jigs
-- customisation guidance for surfaces and enclosure forms
-- a structure for connected multi-hand installations
-- open documentation intended to support replication and remixing
+- cast hand sculptures
+- ESP32-based electronics
+- audio playback
+- timed behaviours
+- modular 3D-printed parts
+- a printed PCB-style internal system
+- a guided flashing / setup workflow
+- tools for casting and alignment
+- support for connected multi-hand installations
 
-MakerWorld, print repositories, or other public posts may host individual assets, but this GitHub repository is the canonical source for the full system.
-
----
-
-## Why make it open?
-
-Helping Hands is intended to travel.
-
-The project is designed so that other people can build their own versions, adapt the enclosure and interaction, swap in new stories or local voices, and carry the idea into new places and communities. The goal is not simply to preserve one finished artefact, but to make the system itself reusable.
-
-By keeping the project open, this repository aims to support:
-
-- individual makers and students
-- artists and designers
-- workshop facilitators
-- community organisers
-- researchers and educators
-- anyone interested in public, tactile, story-led interaction
-
-If you build from this repo, remix part of it, or carry the idea into a new context, please credit the original project and share back what you learn where possible.
+This repo is the main home for the full project: code, files, docs, build notes, and all the weird little bits that make it work.
 
 ---
 
-## System overview
+## Why it exists
 
-A typical Helping Hands build brings together five main layers:
+This project started as a way to make stories of the future feel physical, social, and hard to ignore.
 
-### 1. The hand
-The hand is the main public interface. It is cast as a tactile, human-scale object designed to be held, noticed, and approached instinctively.
+Instead of reading a panel or staring at a screen, you hold something human. It speaks back. It lights up. In a larger installation, other hands can wake up too.
 
-### 2. The enclosure
-The enclosure houses the electronics and gives the project a repairable, printable, and adaptable structural body. The enclosure system is modular and can be reworked for different installation contexts.
-
-### 3. The internal hardware system
-The build uses accessible off-the-shelf electronics organised through a replicable internal layout, including a printed PCB-style carrier approach for easier assembly, maintenance, and documentation.
-
-### 4. The firmware and setup workflow
-The device logic handles touch interaction, timed behaviour, lighting, audio playback, and configuration. A companion setup workflow supports flashing, variable tuning, RTC time setting, and media/configuration management as part of the broader build system.
-
-### 5. The wider networked platform
-Helping Hands is designed as a connected installation platform, where multiple hands can respond together, communicate across a space, and contribute to a larger shared experience.
+The goal is not just to preserve one finished object. It is to make the system open enough that other people can build with it, adapt it, and carry it somewhere new.
 
 ---
 
-## Core features
+## Features
 
-- tactile hand-based interaction
-- cast and printed hybrid build process
-- ESP32-based control system
-- audio playback via JQ6500
+- touch-based interaction
+- cast + printed hybrid build
+- ESP32 control
+- JQ6500 audio playback
 - RTC-supported timed behaviour
 - modular enclosure system
-- printed PCB-style internal organisation
-- configurable firmware structure
+- printed PCB-style internal layout
+- configurable firmware
 - guided setup and flashing workflow
-- support for connected multi-hand installations
-- open files for replication, modification, and reuse
+- support for connected installations
+- open files for remixing and reuse
+
+---
+
+## How it works
+
+A typical Helping Hands build has a few main layers:
+
+### The hand
+The public-facing part. Cast, tactile, and made to be held.
+
+### The enclosure
+A printable body that holds the electronics and can be adapted for different installs.
+
+### The internal hardware system
+Off-the-shelf components organised through a repeatable internal layout, including a printed PCB-style carrier system.
+
+### The firmware
+Handles touch interaction, timing, lighting, audio playback, and configuration.
+
+### The wider platform
+One hand works on its own. Multiple hands can be configured as a larger connected installation.
+
+---
+
+## Build your own?
+
+Yes — that is the point.
+
+Helping Hands is designed to be replicated, modified, and reinterpreted. If you want to build one, this repo is intended to give you everything you need to understand the system and make your own version.
+
+### Start here
+
+- [`docs/overview.md`](docs/overview.md)
+- [`docs/quick-start.md`](docs/quick-start.md)
+- [`docs/build-guide.md`](docs/build-guide.md)
+- [`docs/bill-of-materials.md`](docs/bill-of-materials.md)
+- [`docs/wiring.md`](docs/wiring.md)
+- [`docs/3d-prints.md`](docs/3d-prints.md)
+- [`docs/casting-hands.md`](docs/casting-hands.md)
+- [`docs/flashing.md`](docs/flashing.md)
+
+---
+
+## 3D prints
+
+This project includes more than just an outer shell.
+
+The printable parts include:
+
+- enclosure/body parts
+- hand-related support parts
+- printed PCB-style carrier parts
+- casting tools
+- bolt alignment jigs
+- editable models where available
+
+See [`docs/3d-prints.md`](docs/3d-prints.md).
+
+---
+
+## Casting hands
+
+Casting is a core part of the build, not an afterthought.
+
+The casting guide covers:
+
+- moulding and casting workflow
+- materials and process notes
+- alignment tools
+- bolt placement
+- repeatable assembly tricks
+- lessons learned from testing
+
+See [`docs/casting-hands.md`](docs/casting-hands.md).
+
+---
+
+## Firmware
+
+Current firmware parts include:
+
+- `firmware/main.py`
+- `firmware/rtc.py`
+- `firmware/jq6500.py`
+- `firmware/config.py.example`
+
+See [`docs/firmware.md`](docs/firmware.md).
+
+---
+
+## Customisation
+
+This project is meant to be messed with.
+
+You can customise:
+
+- enclosure form
+- textures and surface details
+- embedded text and graphics
+- light behaviour
+- timing
+- audio content
+- installation context
+- overall theme
+
+The enclosure customisation guide includes notes on using **BumpMesh** and related tools to add patterns, text, and site-specific identity.
+
+See [`docs/enclosure-customisation.md`](docs/enclosure-customisation.md).
 
 ---
 
@@ -94,13 +172,11 @@ helping-hands/
 ├─ LICENSE-CODE
 ├─ LICENSE-DESIGN
 ├─ CONTRIBUTING.md
-├─ CHANGELOG.md
 ├─ docs/
 │  ├─ overview.md
 │  ├─ quick-start.md
 │  ├─ build-guide.md
 │  ├─ bill-of-materials.md
-│  ├─ hardware.md
 │  ├─ wiring.md
 │  ├─ firmware.md
 │  ├─ flashing.md
@@ -113,236 +189,61 @@ helping-hands/
 │  ├─ credits.md
 │  └─ faq.md
 ├─ firmware/
-│  ├─ main.py
-│  ├─ rtc.py
-│  ├─ jq6500.py
-│  ├─ config.py.example
-│  └─ tools/
 ├─ hardware/
-│  ├─ bom/
-│  ├─ wiring-diagrams/
-│  ├─ schematics/
-│  └─ supplier-notes/
 ├─ 3d-files/
-│  ├─ hand/
-│  ├─ enclosure/
-│  ├─ printed-pcb-system/
-│  ├─ casting-tools/
-│  └─ editable/
 ├─ assets/
-│  ├─ images/
-│  ├─ diagrams/
-│  └─ video/
 ├─ examples/
-│  ├─ audio-packs/
-│  ├─ configurations/
-│  └─ installation-examples/
 └─ community/
-   ├─ workshop-examples/
-   └─ remix-gallery/
 ```
-
----
-
-## Start here
-
-### To understand the project
-Read:
-
-1. [`docs/overview.md`](docs/overview.md)
-2. [`docs/build-guide.md`](docs/build-guide.md)
-3. [`docs/casting-hands.md`](docs/casting-hands.md)
-4. [`docs/firmware.md`](docs/firmware.md)
-
-### To build a hand
-Go to:
-
-1. [`docs/quick-start.md`](docs/quick-start.md)
-2. [`docs/bill-of-materials.md`](docs/bill-of-materials.md)
-3. [`docs/wiring.md`](docs/wiring.md)
-4. [`docs/3d-prints.md`](docs/3d-prints.md)
-5. [`docs/flashing.md`](docs/flashing.md)
-
-### To customise the enclosure
-Start with:
-
-- [`docs/enclosure-customisation.md`](docs/enclosure-customisation.md)
-
-This includes guidance on changing forms, adjusting surfaces, and developing custom visual identities using open workflows, including BumpMesh.
-
----
-
-## Build ecosystem
-
-The repository is structured around the full making process, not just code.
-
-### Hardware
-The hardware side of the project combines off-the-shelf electronics, printed components, connectors, fixings, and power systems. The build documentation is intended to make the physical assembly legible and repeatable.
-
-### 3D prints
-This includes enclosure parts, internal carrier parts, casting tools, jigs, and editable models where available. The 3D system is part of what makes the project reproducible and adaptable.
-
-### Casting
-Casting is a central part of the build. The project includes process guidance for moulding and casting hands, positioning hardware connections, and using printed tools for repeatable assembly and bolt alignment.
-
-### Firmware
-The firmware layer brings together interaction logic, audio handling, timed behaviours, and configurable variables for tuning the build to different contexts.
-
-### Setup workflow
-Helping Hands includes a guided setup approach for programming and configuring devices as part of a broader build ecosystem. This covers firmware flashing, RTC setup, configuration values, and media preparation.
-
-### Connected installations
-Beyond a single sculpture, the system is designed to support installations made up of multiple communicating hands, allowing experiences to spread spatially and socially through a site.
-
----
-
-## Firmware files
-
-Current firmware components include:
-
-- `firmware/main.py` — core interaction logic
-- `firmware/rtc.py` — RTC support and time handling
-- `firmware/jq6500.py` — audio module communication
-- `firmware/config.py.example` — configuration template
-- `firmware/tools/` — supporting setup and workflow utilities
-
-The firmware structure is documented in [`docs/firmware.md`](docs/firmware.md).
-
----
-
-## 3D prints and editable files
-
-This repository is intended to hold several categories of printable and editable assets:
-
-- hand-related printed parts
-- enclosure/body parts
-- printed PCB-style carrier parts
-- casting alignment tools
-- bolt placement jigs
-- editable CAD files
-- installation-specific adaptations where relevant
-
-See [`docs/3d-prints.md`](docs/3d-prints.md) for file descriptions, print settings, and assembly notes.
-
----
-
-## Casting hands
-
-The hand itself is a key part of the project’s identity and interaction.
-
-The casting guide is intended to cover:
-
-- moulding and casting workflow
-- materials and process notes
-- how printed tools are used to support repeatability
-- bolt and fixing alignment
-- lessons learned from testing and iteration
-
-See [`docs/casting-hands.md`](docs/casting-hands.md).
-
----
-
-## Customisation
-
-Helping Hands is designed to be adapted.
-
-Possible areas of customisation include:
-
-- enclosure form
-- surface textures
-- embedded text or patterning
-- LED behaviour
-- timing and interaction states
-- audio content
-- installation context
-- local storytelling themes
-
-The enclosure customisation guide includes notes on using **BumpMesh** and related workflows to modify surfaces, add new identity layers, and create site-specific versions of the system.
-
-See [`docs/enclosure-customisation.md`](docs/enclosure-customisation.md).
-
----
-
-## Documentation approach
-
-This repository is written in a maker-first voice.
-
-It aims to support people coming from different directions, including making, art, design, electronics, installation, and public engagement. The documentation is therefore intended to be:
-
-- clear before technical
-- visual where possible
-- practical and replicable
-- honest about process
-- open to modification and reuse
 
 ---
 
 ## AI transparency
 
-This project was developed through a combination of hands-on prototyping, open-source tools, and AI-assisted coding and documentation workflows.
+This project was developed through a mix of hands-on prototyping, open-source tools, and AI-assisted coding/documentation workflows.
 
-Generative AI was used to support parts of the development process, including:
+AI was used to help with things like:
 
 - code drafting
-- code revision
-- debugging assistance
-- documentation structuring
+- revision
+- debugging support
+- documentation structure
 - explanatory writing
 
-All final decisions, testing, selection, and integration were carried out by the project author.
+All final decisions, testing, and integration were carried out by the project author.
 
-A fuller note on AI use can be found in [`docs/ai-transparency.md`](docs/ai-transparency.md).
-
----
-
-## Safety
-
-Helping Hands is a physical computing and fabrication project.
-
-Please take care when working with:
-
-- batteries and charging boards
-- power circuits and wiring
-- soldering equipment
-- speakers and audio electronics
-- casting materials
-- cutting tools, drills, and heated hardware
-- public installation contexts
-
-You are responsible for checking that any build is safe, legal, and appropriate for its intended use.
+More detail: [`docs/ai-transparency.md`](docs/ai-transparency.md)
 
 ---
 
-## Open-source tools and credits
+## Open-source credits
 
-This project depends on the work of many open-source tools, libraries, and communities. These should be credited clearly and consistently.
+This project depends on the work of many open-source tools, libraries, and communities.
 
-This may include, depending on the workflow used:
+That includes things like:
 
 - MicroPython
 - ESP32 tools and utilities
 - JQ6500 libraries
 - CAD and 3D tools
 - BumpMesh
-- slicer software
-- community examples, scripts, and references that informed the build
+- slicers and fabrication software
+- community examples and references
 
-A fuller list should be maintained in [`docs/credits.md`](docs/credits.md).
-
-If something should be credited and is missing, please open an issue or pull request.
+See [`docs/credits.md`](docs/credits.md).
 
 ---
 
 ## Licensing
 
-The intention of this repository is to keep the project as open as possible.
+The intention is to keep this project as open as possible.
 
-Suggested structure:
+Suggested split:
 
-- **Code**: MIT License
+- **Code**: MIT
 - **Documentation, images, and design files**: CC BY 4.0
 
-This means others can build, adapt, share, and remix the project, including commercially, provided attribution is given.
+That means people can build, adapt, share, and remix the project, including commercially, as long as they give credit.
 
 See:
 
@@ -351,69 +252,20 @@ See:
 
 ---
 
-## Contributing
-
-Contributions are welcome, including:
-
-- firmware improvements
-- bug fixes
-- clearer build documentation
-- alternative hardware notes
-- remixed enclosure files
-- better casting tools or jigs
-- improved diagrams
-- translations
-- photos, examples, and derivatives
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution guidance.
-
----
-
-## Planned documentation pages
-
-The repository is designed to grow into a full project guide covering:
-
-- overview
-- quick start
-- build guide
-- bill of materials
-- hardware
-- wiring
-- firmware
-- flashing
-- networking
-- 3D prints
-- printed PCB-style system
-- casting hands
-- enclosure customisation
-- AI transparency
-- credits
-- FAQ
-
----
-
 ## If you build one
 
-If you make your own version of Helping Hands, I would love to see it.
+Please show me.
 
-Please consider:
-
-- opening an issue
-- sharing images or video
-- linking back to this project
-- documenting your changes
-- contributing improvements back to the repo
-
-These hands are meant to be connected, not just electronically, but socially.
+Open an issue, share a photo, link your remix, or send back improvements. These hands are meant to spread.
 
 ---
 
 ## Links
 
-Add your preferred project links here, for example:
+Add your project links here:
 
-- project website
 - Studio Tommy
 - MakerWorld
 - exhibition documentation
-- contact email
+- website
+- contact
