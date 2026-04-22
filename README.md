@@ -1,15 +1,28 @@
 # Helping Hands
 
-Helping Hands is an open-source interactive sculpture project built around cast hands, touch, light, sound, and a modular 3D-printed/electronic build system.
+**Helping Hands** is an open-source interactive sculpture project built around cast hands, touch, sound, light, and modular electronics.
 
-Hold a hand, and it responds.
+Hold a hand, and it speaks back.
 
-Build one hand as a standalone piece, or treat it as part of a wider networked installation where multiple hands can react together across a space.
+Build one as a standalone object, or connect multiple hands together to create installations that wake up across a space.
 
 ![Helping Hands hero image](assets/images/hero.jpg)
 
-Join in, remix it, build your own version, and make it strange.
+Helping Hands brings together:
 
+- cast hand sculptures
+- ESP32-based electronics
+- audio playback
+- timed behaviours
+- modular 3D-printed parts
+- a printed PCB-style internal system
+- a guided setup and flashing workflow
+- tools for casting and alignment
+- support for connected multi-hand installations
+
+This repo is the main home for the full project: code, files, build notes, documentation, and all the odd little details that make it work.
+
+If you want to build one, remix one, or make your own strange version, you’re in the right place.
 ---
 
 ## What is it?
@@ -103,10 +116,8 @@ This project includes more than just an outer shell.
 The printable parts include:
 
 - enclosure/body parts
-- hand-related support parts
+- hand-casting tools
 - printed PCB-style carrier parts
-- casting tools
-- bolt alignment jigs
 - editable models where available
 
 See [`docs/3d-prints.md`](docs/3d-prints.md).
@@ -115,7 +126,7 @@ See [`docs/3d-prints.md`](docs/3d-prints.md).
 
 ## Casting hands
 
-Casting is a core part of the build, not an afterthought.
+Casting is a core part of the build.
 
 The casting guide covers:
 
