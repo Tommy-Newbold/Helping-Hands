@@ -1,282 +1,325 @@
 # Helping Hands
 
-**Helping Hands** is an open-source interactive sculpture project built around cast hands, touch, sound, light, and modular electronics.
+Helping Hands are interactive public sculptures that invite people to listen to local stories about climate-adapted futures.
 
-Hold a hand, and it speaks back.
+Each hand senses when it is touched, glows with light, and plays an audio story. The project began as part of *Waters of Leith*, a design project exploring how local knowledge, everyday experience, and public imagination can shape climate adaptation in Leith, Edinburgh.
 
-Build one as a standalone object, or connect multiple hands together to create installations that wake up across a space.
-
-![Helping Hands hero image](assets/images/hero.jpg)
-
-Helping Hands brings together:
-
-- cast hand sculptures
-- ESP32-based electronics
-- audio playback
-- timed behaviours
-- modular 3D-printed parts
-- a printed PCB-style internal system
-- a guided setup and flashing workflow
-- tools for casting and alignment
-- support for connected multi-hand installations
-
-This repo is the main home for the full project: code, files, build notes, documentation, and all the odd little details that make it work.
-
-If you want to build one, remix one, or make your own strange version, you’re in the right place.
----
-
-## What is it?
-
-Helping Hands combines:
-
-- cast hand sculptures
-- ESP32-based electronics
-- audio playback
-- timed behaviours
-- modular 3D-printed parts
-- a printed PCB-style internal system
-- a guided flashing / setup workflow
-- tools for casting and alignment
-- support for connected multi-hand installations
-
-This repo is the main home for the full project: code, files, docs, build notes, and all the weird little bits that make it work.
+This repository contains the files needed to make your own Helping Hand: 3D-printable parts, casting tools, wiring notes, firmware, and installation guidance.
 
 ---
 
-## Why it exists
+## What are Helping Hands?
 
-This project started as a way to make stories of the future feel physical, social, and hard to ignore.
+Helping Hands are small, touch-sensitive audio sculptures designed to be installed in public or semi-public places.
 
-Instead of reading a panel or staring at a screen, you hold something human. It speaks back. It lights up. In a larger installation, other hands can wake up too.
+They act as **waymarkers**: physical points where community stories, memories, concerns, and hopes can be held, heard, and shared.
 
-The goal is not just to preserve one finished object. It is to make the system open enough that other people can build with it, adapt it, and carry it somewhere new.
+When someone holds a hand, it responds with light and sound. Each hand can contain a different voice, story, or message from the future.
+
+---
+
+## Why make them?
+
+Helping Hands are about making local imagination tangible.
+
+They can be used for:
+
+- community engagement
+- speculative design workshops
+- climate adaptation conversations
+- public art installations
+- local storytelling projects
+- education and participatory research
+- playful civic experiments
+
+The project is intentionally open-ended. You can build one as a sculpture, a workshop output, a public installation, or a starting point for your own version.
 
 ---
 
 ## Features
 
-- touch-based interaction
-- cast + printed hybrid build
-- ESP32 control
-- JQ6500 audio playback
-- RTC-supported timed behaviour
-- modular enclosure system
-- printed PCB-style internal layout
-- configurable firmware
-- guided setup and flashing workflow
-- support for connected installations
-- open files for remixing and reuse
+Current and planned firmware features:
+
+- [x] MicroPython firmware
+- [x] Touch sensing
+- [x] Audio playback using the JQ6500 MP3 module
+- [x] Blue LED pulse when touched
+- [x] Direct touch trigger
+- [x] Near-sense trigger mode
+- [x] Access Point monitor dashboard
+- [x] Touch logging
+- [x] Touch duration logging
+- [x] Day/night behaviour
+- [x] Quiet hours
+- [x] Optional RTC support for reliable timekeeping
+- [ ] Mesh mode for linking multiple hands together
+- [ ] Windows/Linux install wizard
+- [ ] Improved dashboarding
+- [ ] Remote access
+- [ ] USB-C battery-management routing
+- [ ] Lower-cost electronics version
+- [ ] More confirmed print profiles
+
+Confirmed print testing:
+
+- [x] Bambu Lab A1 Mini
+- [x] Bambu Lab P1S
+- [x] Creality Ender 3
+- [ ] More printers wanted!
 
 ---
 
-## How it works
+## Overall instructions
 
-A typical Helping Hands build has a few main layers:
+The basic build process is:
 
-### The hand
-The public-facing part. Cast, tactile, and made to be held.
+1. Buy the electronic components.
+2. Print the enclosure and internal parts.
+3. Cast the hands.
+4. Wire the electronics.
+5. Flash the ESP32 with MicroPython.
+6. Upload the Helping Hands firmware.
+7. Add your audio files to the JQ6500 module.
+8. Configure the hand.
+9. Test touch, audio, lights, and power.
+10. Install the hand.
 
-### The enclosure
-A printable body that holds the electronics and can be adapted for different installs.
+For the full build guide, see:
 
-### The internal hardware system
-Off-the-shelf components organised through a repeatable internal layout, including a printed PCB-style carrier system.
+[`docs/instructions.md`](docs/instructions.md)
 
-### The firmware
-Handles touch interaction, timing, lighting, audio playback, and configuration.
+For print settings and tuning, see:
 
-### The wider platform
-One hand works on its own. Multiple hands can be configured as a larger connected installation.
+[`docs/3d-printing.md`](docs/3d-printing.md)
+
+For enclosure customisation, see:
+
+[`docs/enclosure-customisation.md`](docs/enclosure-customisation.md)
+
+---
+
+## Tools
+
+You will likely need:
+
+- 3D printer
+- Soldering iron
+- laptop or desktop computer
 
 ---
 
-## Build your own?
-
-Yes — that is the point.
-
-Helping Hands is designed to be replicated, modified, and reinterpreted. If you want to build one, this repo is intended to give you everything you need to understand the system and make your own version.
-
-### Start here
-
-- [`docs/overview.md`](docs/overview.md)
-- [`docs/quick-start.md`](docs/quick-start.md)
-- [`docs/build-guide.md`](docs/build-guide.md)
-- [`docs/bill-of-materials.md`](docs/bill-of-materials.md)
-- [`docs/wiring.md`](docs/wiring.md)
-- [`docs/3d-prints.md`](docs/3d-prints.md)
-- [`docs/casting-hands.md`](docs/casting-hands.md)
-- [`docs/flashing.md`](docs/flashing.md)
-
----
+# Parts list
 
 ## 3D prints
 
-This project includes more than just an outer shell.
+The printable files are split into a few sets:
 
-The printable parts include:
+| Print set | Description | Link |
+|---|---|---|
+| Enclosure | Main body, lid, mounts, internal structure | MakerWorld link coming soon |
+| PCB / wiring carrier | Printable wiring support or internal carrier | MakerWorld link coming soon |
+| Hand casting tool | Tools for aligning threaded rod and casting hands | MakerWorld link coming soon |
 
-- enclosure/body parts
-- hand-casting tools
-- printed PCB-style carrier parts
-- editable models where available
+More detail:
 
-See [`docs/3d-prints.md`](docs/3d-prints.md).
-
----
-
-## Casting hands
-
-Casting is a core part of the build.
-
-The casting guide covers:
-
-- moulding and casting workflow
-- materials and process notes
-- alignment tools
-- bolt placement
-- repeatable assembly tricks
-- lessons learned from testing
-
-See [`docs/casting-hands.md`](docs/casting-hands.md).
+[`docs/3d-printing.md`](docs/3d-printing.md)
 
 ---
 
-## Firmware
+## Components
+For full list see: 
 
-Current firmware parts include:
+[`docs/shopping-list.md`](docs/shopping-list.md)
 
-- `firmware/main.py`
-- `firmware/rtc.py`
-- `firmware/jq6500.py`
-- `firmware/config.py.example`
+### Electronics
 
-See [`docs/firmware.md`](docs/firmware.md).
+| Part | Notes | Link |
+|---|---|---|
+| ESP32 WROOM dev board | Main controller | Link coming soon |
+| JQ6500 MP3 player | Audio playback module | Link coming soon |
+| Adafruit BQ25185 solar charger | For solar installs | Adafruit link coming soon |
+| DS3231 RTC module | Optional, improves day/night and quiet-hour reliability | Link coming soon |
+| 18650 Li-ion cell | Use a reputable protected cell where possible | Link coming soon |
+| 3W 8Ω 67mm speaker driver | Main audio output | Link coming soon |
+| 24 LED COB WS2812B Light Ring | Light feedback | Adafruit / cheap link coming soon |
 
 ---
 
-## Customisation
+# Firmware
 
-This project is meant to be messed with.
+The firmware is written in MicroPython.
 
-You can customise:
+Current files include:
+
+| File | Description |
+|---|---|
+| `main.py` | Main Helping Hands firmware |
+| `jq6500.py` | JQ6500 MP3 player library |
+| `rtc_flash.py` | RTC setup / flashing helper |
+| `config.py.example` | Example configuration file |
+
+---
+
+# Customisation
+
+This project is meant to be messed with. You can customise:
 
 - enclosure form
 - textures and surface details
-- embedded text and graphics
 - light behaviour
 - timing
 - audio content
 - installation context
 - overall theme
 
-The enclosure customisation guide includes notes on using **BumpMesh** and related tools to add patterns, text, and site-specific identity.
+See:
 
-See [`docs/enclosure-customisation.md`](docs/enclosure-customisation.md).
-
----
-
-## Repository structure
-
-```text
-helping-hands/
-├─ README.md
-├─ LICENSE-CODE
-├─ LICENSE-DESIGN
-├─ CONTRIBUTING.md
-├─ docs/
-│  ├─ overview.md
-│  ├─ quick-start.md
-│  ├─ build-guide.md
-│  ├─ bill-of-materials.md
-│  ├─ wiring.md
-│  ├─ firmware.md
-│  ├─ flashing.md
-│  ├─ networking.md
-│  ├─ 3d-prints.md
-│  ├─ printed-pcb-system.md
-│  ├─ casting-hands.md
-│  ├─ enclosure-customisation.md
-│  ├─ ai-transparency.md
-│  ├─ credits.md
-│  └─ faq.md
-├─ firmware/
-├─ hardware/
-├─ 3d-files/
-├─ assets/
-├─ examples/
-└─ community/
-```
+[`docs/enclosure-customisation.md`](docs/enclosure-customisation.md)
 
 ---
 
-## AI transparency
-
-This project was developed through a mix of hands-on prototyping, open-source tools, and AI-assisted coding/documentation workflows.
-
-AI was used to help with things like:
-
-- code drafting
-- revision
-- debugging support
-- documentation structure
-- explanatory writing
-
-All final decisions, testing, and integration were carried out by the project author.
-
-More detail: [`docs/ai-transparency.md`](docs/ai-transparency.md)
-
----
-
-## Open-source credits
-
-This project depends on the work of many open-source tools, libraries, and communities.
-
-That includes things like:
-
-- MicroPython
-- ESP32 tools and utilities
-- JQ6500 libraries
-- CAD and 3D tools
-- BumpMesh
-- slicers and fabrication software
-- community examples and references
-
-See [`docs/credits.md`](docs/credits.md).
-
----
-
-## Licensing
-
-The intention is to keep this project as open as possible.
-
-Suggested split:
-
-- **Code**: MIT
-- **Documentation, images, and design files**: CC BY 4.0
-
-That means people can build, adapt, share, and remix the project, including commercially, as long as they give credit.
+# Wiring
 
 See:
 
-- [`LICENSE-CODE`](LICENSE-CODE)
-- [`LICENSE-DESIGN`](LICENSE-DESIGN)
+[`docs/wiring.md`](docs/wiring.md)
 
 ---
 
-## If you build one
+# Installation
 
-Please show me.
+Helping Hands can be installed indoors, outdoors, or as part of temporary public engagement events.
 
-Open an issue, share a photo, link your remix, or send back improvements. These hands are meant to spread.
+Before installing in public, consider:
+
+- permission from the site owner
+- weather protection
+- safe mounting
+- battery access
+- charging method
+- audio volume
+- trip hazards
+- sharp edges
+- vandal resistance
+- how people will know what to do
+- whether the hand needs a plaque, label, or prompt
+
+Suggested prompt:
+
+> Hold my hand. Hear my story.
 
 ---
 
-## Links
+# Documentation
 
-Add your project links here:
+Planned documentation:
 
-- Studio Tommy
-- MakerWorld
-- exhibition documentation
-- website
-- contact
+| Document | Status |
+|---|---|
+| `docs/instructions.md` | In progress |
+| `docs/3d-printing.md` | In progress |
+| `docs/wiring.md` | In progress |
+| `docs/firmware.md` | In progress |
+| `docs/enclosure-customisation.md` | In progress |
+| `docs/casting.md` | In progress |
+| `docs/installing.md` | In progress |
+| `docs/troubleshooting.md` | In progress |
+
+---
+
+# Troubleshooting
+
+Common issues currently include:
+
+| Problem | Likely cause |
+|---|---|
+| Touch works on USB but not battery | Weak ground reference or touch threshold needs tuning |
+| LEDs do not turn on | Power issue, wrong data pin, or insufficient current |
+| Audio does not play | JQ6500 file indexing or wiring issue |
+| Time-based features are wrong | RTC not set or missing |
+| Dashboard does not appear | ESP32 AP mode not active |
+| Touch is too sensitive | Threshold too low |
+| Touch is not sensitive enough | Threshold too high or poor touch connection |
+
+See:
+
+[`docs/troubleshooting.md`](docs/troubleshooting.md)
+
+---
+
+# Roadmap
+
+Things I would like to improve next:
+
+- [ ] Better installation wizard
+- [ ] Cleaner dashboard UI
+- [ ] Mesh behaviour between multiple hands
+- [ ] Easier audio upload process
+- [ ] Better battery monitoring
+- [ ] More reliable solar version
+- [ ] Cheaper electronics version
+- [ ] More enclosure variants
+- [ ] More mounting options
+- [ ] More print profiles from different printers
+- [ ] Better documentation for public installs
+
+---
+
+# Contributing
+
+Please contribute!
+
+This project is still developing, and there are lots of ways to help:
+
+- build your own version
+- share photos of your installation
+- test the print files on different printers
+- suggest better components
+- improve the firmware
+- report bugs
+- improve the documentation
+- make new enclosure variants
+- adapt the project for another place or community
+
+If something does not work, open an issue and describe:
+
+1. what you were trying to do
+2. what happened
+3. what hardware you used
+4. what firmware version you used
+5. photos or screenshots if useful
+
+Pull requests are welcome, especially for small fixes, documentation improvements, and tested hardware changes.
+
+Forks, remixes, and strange versions are encouraged.
+
+---
+
+# Credits
+
+Created by **Tommy Newbold / Studio Tommy** as part of the *Waters of Leith* project.
+
+This project uses the `jq6500.py` library for controlling the JQ6500 MP3 module.
+
+Credit and source link to be added.
+
+---
+
+# Licensing
+
+This project uses separate licences for code and physical/documentation files.
+
+1. **Code:** Licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
+2. **3D Models and Documentation:** Licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+This means you can use, adapt, remix, and share the project, but improvements should remain open and credited.
+
+---
+
+# A note on AI-assisted code
+
+Some of the firmware and documentation for this project has been developed with the help of AI coding tools.
+
+That means the code should be treated like any other experimental open-source hardware project: useful, hackable, and worth checking carefully before relying on it.
+
+If you spot something odd, inefficient, unsafe, or just badly explained, please open an issue or suggest an improvement.
