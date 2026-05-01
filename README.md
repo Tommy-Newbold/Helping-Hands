@@ -1,6 +1,9 @@
 Helping Hands are interactive public sculptures that invite people to listen to local stories about climate-adapted futures.
 
 
+<img width="800" height="200" alt="helping hands wordmark" src="https://github.com/user-attachments/assets/ca242abb-a82e-46ed-b473-48588106e7b9" />
+
+
 <img width="338" height="600.0" alt="DSC00719" src="https://github.com/user-attachments/assets/b928054b-a593-4d7c-a91b-3269a63d4c65" />
 
 
