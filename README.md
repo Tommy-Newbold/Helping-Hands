@@ -1,6 +1,8 @@
-# Helping Hands
-
 Helping Hands are interactive public sculptures that invite people to listen to local stories about climate-adapted futures.
+
+
+<img width="338" height="600.0" alt="DSC00719" src="https://github.com/user-attachments/assets/b928054b-a593-4d7c-a91b-3269a63d4c65" />
+
 
 Each hand senses when it is touched, glows with light, and plays an audio story. The project began as part of *Waters of Leith*, a design project exploring how local knowledge, everyday experience, and public imagination can shape climate adaptation in Leith, Edinburgh.
 
@@ -11,6 +13,9 @@ This repository contains the files needed to make your own Helping Hand: 3D-prin
 ## What are Helping Hands?
 
 Helping Hands are small, touch-sensitive audio sculptures designed to be installed in public or semi-public places.
+
+<img width="600" height="400" alt="DSC00763" src="https://github.com/user-attachments/assets/1e37ef9f-a0d7-499f-9ddc-ab6969c5dafd" />
+
 
 They act as **waymarkers**: physical points where community stories, memories, concerns, and hopes can be held, heard, and shared.
 
@@ -37,6 +42,9 @@ The project is intentionally open-ended. You can build one as a sculpture, a wor
 ---
 
 ## Features
+
+<img width="240" height="320" alt="Tommy chat - 2026-05-01 06 41 29" src="https://github.com/user-attachments/assets/9ce7360f-4b9e-4195-b154-7d6c2b7e1a0d" />
+
 
 Current and planned firmware features:
 
@@ -70,6 +78,9 @@ Confirmed print testing:
 ---
 
 ## Overall instructions
+
+<img width="240" height="320" alt="Tommy chat - 2026-05-01 06 41 34" src="https://github.com/user-attachments/assets/07fab208-61d1-4871-bddb-5fe0dfcf63c0" />
+
 
 The basic build process is:
 
