@@ -11,6 +11,11 @@ For the best lighting effect and strength, print the visible enclosure parts in 
 
 ## Quick print summary
 
+[![Static Badge](https://img.shields.io/badge/Main_Body-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands) 
+[![Static Badge](https://img.shields.io/badge/PCB-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands) 
+[![Static Badge](https://img.shields.io/badge/Alignment_Tool-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands)
+
+
 | Setting / requirement | Recommendation |
 | --- | --- |
 | Material | Translucent PET-G |
