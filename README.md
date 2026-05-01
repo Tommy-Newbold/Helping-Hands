@@ -131,7 +131,7 @@ The printable files are split into a few sets:
 | Print set | Description | Link |
 |---|---|---|
 | Enclosure | Main body, lid, mounts, internal structure | [![Static Badge](https://img.shields.io/badge/Main_Body-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands) |
-| PCB / wiring carrier | Printable wiring support or internal carrier | [![Static Badge](https://img.shields.io/badge/PCB-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands)n |
+| PCB / wiring carrier | Printable wiring support or internal carrier | [![Static Badge](https://img.shields.io/badge/PCB-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands) |
 | Hand casting tool | Tools for aligning threaded rod and casting hands |[![Static Badge](https://img.shields.io/badge/Alignment_Tool-MakerWorld-%2308bf08?style=flat&logo=bambulab)](https://makerworld.com/en/models/2741945-helping-hands) |
 
 More detail:
